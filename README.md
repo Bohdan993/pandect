@@ -1,3 +1,2 @@
-# Greens Studio Blog
-This is a blog for web studio.
+# Redesign of Pandect web site
 Author <bohdan1trush@gmail.com>
