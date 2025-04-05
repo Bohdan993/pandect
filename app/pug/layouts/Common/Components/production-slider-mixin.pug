@@ -1,0 +1,49 @@
+mixin production-slider(isBtn = true, title = 'Хіт продаж', isBg = true, isBgWavy = false, isBgColor = false)
+        .production-slider
+            .production-slider__layer(class=`${isBg ? '' : 'production-slider__layer_empty'} ${isBgWavy ? 'production-slider__layer_wavy' : '' } ${isBgColor ? 'production-slider__layer_color' : '' }`)
+                .center
+                    h2.title__h2.production-slider__title !{title}
+                    .production-slider__slider.splide#cards-slider.cards-slider(class=`${isBtn ? '' : 'production-slider__slider_common'}`)
+                        .splide__extensions
+                            .splide__extensions-layer
+                                .cards-slider__arrows
+                                    button.cards-slider__arrow.cards-slider__arrow--prev
+                                        .ico
+                                            +svg2('arrow-left')
+                                    span.cards-slider__arrow-separator
+                                        |
+                                    button.cards-slider__arrow.cards-slider__arrow--next
+                                        .ico
+                                            +svg2('arrow-right')
+                        .production-slider-slider__track.splide__track.cards-slider__track.animate(data-animation="fadeInTop")
+                            ul.production-slider-slider__list.splide__list.cards-slider__list
+                                li.production-slider-slider__slide.splide__slide.cards-slider__slide
+                                    +card('production-slider', 'img/car.png')
+                                li.production-slider-slider__slide.splide__slide.cards-slider__slide
+                                    +card('production-slider', 'img/card-img-1.png')
+                                li.production-slider-slider__slide.splide__slide.cards-slider__slide
+                                    +card('production-slider', 'img/card-img-2.png')
+                                li.production-slider-slider__slide.splide__slide.cards-slider__slide
+                                    +card('production-slider', 'img/card-img-3.png')
+                                li.production-slider-slider__slide.splide__slide.cards-slider__slide
+                                    +card('production-slider', 'img/card-img-1.png')
+                                li.production-slider-slider__slide.splide__slide.cards-slider__slide
+                                    +card('production-slider', 'img/card-img-3.png')
+                                li.production-slider-slider__slide.splide__slide.cards-slider__slide
+                                    +card('production-slider', 'img/card-img-2.png')
+                                li.production-slider-slider__slide.splide__slide.cards-slider__slide
+                                    +card('production-slider', 'img/card-img-1.png')
+                                li.production-slider-slider__slide.splide__slide.cards-slider__slide
+                                    +card('production-slider', 'img/card-img-2.png')
+                                li.production-slider-slider__slide.splide__slide.cards-slider__slide
+                                    +card('production-slider', 'img/card-img-3.png')
+                                li.production-slider-slider__slide.splide__slide.cards-slider__slide
+                                    +card('production-slider', 'img/card-img-1.png')
+                                li.production-slider-slider__slide.splide__slide.cards-slider__slide
+                                    +card('production-slider', 'img/card-img-2.png')
+                    if isBtn
+                        a.production-slider__btn.main-btn(href="/catalog.html")
+                            i.ico
+                                +svg2('grid')
+                            span.main-btn__text
+                                |Перейти до каталогу

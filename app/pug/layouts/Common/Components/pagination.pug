@@ -1,0 +1,31 @@
+mixin pagination()
+		.pagination
+			a.main-btn.main-btn_gray.pagination__prev.pagination__btn(href="#")
+				i.ico
+					+svg2('arrow-left')
+				span.main-btn__text.main-btn__text_gray
+					|Назад
+			ul.pagination__list
+				li.pagination__list-item.active
+					span.pagination__number 1
+				li.pagination__list-item
+					a.pagination__link(href="#")
+						span.pagination__number 2
+				li.pagination__list-item
+					a.pagination__link(href="#")
+						span.pagination__number 3
+				li.pagination__list-item
+					span.pagination__dots
+						|...
+				li.pagination__list-item
+					a.pagination__link(href="#")
+						span.pagination__number 10
+				li.pagination__list-item
+					a.pagination__link(href="#")
+						span.pagination__number 11
+			a.main-btn.main-btn_gray.pagination__next.pagination__btn(href="#")
+				span.main-btn__text.main-btn__text_gray
+					|Вперед
+				i.ico
+					+svg2('arrow-right')
+				

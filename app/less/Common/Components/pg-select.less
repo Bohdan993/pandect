@@ -1,0 +1,72 @@
+.pg-select {
+    width: 100%;
+
+    &[data-type*=select-one]:after {
+        // content: attr(role);
+        width: 10px;
+        height: 10px;
+        border: unset;
+        background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2210%22%20height%3D%226%22%20viewBox%3D%220%200%2010%206%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M9.84016%200.501473L9.5126%200.166414C9.40951%200.0617757%209.27235%200.00412948%209.12577%200.00412948C8.97926%200.00412948%208.84194%200.0617757%208.73885%200.166414L5.00224%203.96231L1.26131%200.162202C1.15838%200.0575637%201.02107%200%200.87456%200C0.728055%200%200.590655%200.0575637%200.487646%200.162202L0.160001%200.495196C-0.0533338%200.711741%20-0.0533338%201.06447%200.160001%201.28102L4.61402%205.82178C4.71695%205.92633%204.8541%206%205.00191%206H5.00362C5.1502%206%205.28736%205.92625%205.39029%205.82178L9.84016%201.29332C9.94325%201.18877%209.99984%201.04523%2010%200.896407C10%200.747502%209.94325%200.605946%209.84016%200.501473Z%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        transition: transform 0.25s linear;
+        margin-top: -4px;
+        right: 15px;
+    }
+
+    &.is-open[data-type*=select-one] {
+        &:after {
+            margin-top: -4px;
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.pg-select__inner {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    background-color: @white;
+    padding: 6px 12px;
+    padding-right: 25px;
+    border: 1px solid @gray12;
+    border-radius: 4px;
+    font-size: 14px;
+    min-height: unset;
+    overflow: hidden;
+    color: @gray2;
+    max-height: 34px;
+
+}
+
+.pg-select__inner-list {
+    padding: 0;
+
+    &.choices__list--dropdown {
+        border-color: @transparent;
+        z-index: 10;
+        margin-top: 0;
+        box-shadow: 0px 16px 32px 2px rgba(97, 97, 97, 0.1), 0px 8px 16px 2px rgba(97, 97, 97, 0.1);
+        .pg-select__selectable {
+            padding: 5px 13px;
+            color: @gray2;
+            transition: color 0.25s linear, background-color 0.25s linear;
+            cursor: pointer;
+
+            &:hover {
+                background-color: @main-color;
+                color: @white;
+            }
+        }
+    }
+
+
+    &.choices__list--single {
+        .pg-select__selectable {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}

@@ -1,0 +1,225 @@
+.single-article__container {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+
+.single-article__layer {
+    position: relative;
+    background: url('../img/about-bg.png') repeat center/auto;
+
+
+    &>* {
+        position: relative;
+        z-index: 1;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 1127/(1385) * 100%;
+        right: 340/1920 * 100%;
+        width: 76px;
+        height: 76px;
+        background: url('../img/geometric2.png') no-repeat center/contain;
+    }
+
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 191/(1385) * 100%;
+        left: 97/1920 * 100%;
+        width: 111px;
+        height: 111px;
+        background: url('../img/geometric6.png') no-repeat center/contain;
+    }
+}
+
+
+.single-article__main {
+    flex-basis: (1360 - (312 + 36/2))/1360 * 100%;
+}
+
+
+.single-article__main-layer {
+    border-radius: 4px;
+    background-color: @white;
+    padding: 28px;
+}
+
+.single-article__sidebar {
+    padding-right: 0;
+    padding-left: 18px;
+}
+
+.single-article__sidebar-layer {
+    padding: 20px 25px;
+    background-color: @white;
+    border-radius: 4px;
+}
+
+
+.single-article__article {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    background-color: @white;
+    transition: box-shadow 0.25s linear;
+    padding-right: 42px;
+
+    &:hover {
+        box-shadow: 0px 4px 30px rgba(39, 43, 63, 0.3);
+    }
+}
+
+
+.single-article__article-title {
+    font-weight: 500;
+    font-size: 24/14 * 1rem;
+    line-height: 32/24;
+    padding-bottom: 20px;
+    transition: color 0.25s linear;
+    padding-right: (110 - 42)/662 * 100%;
+}
+
+
+.single-article__article-text {
+
+    line-height: 21/14;
+    color: @gray2;
+    opacity: 0.75;
+    padding-bottom: 30px;
+    padding-right: (110 - 42)/662 * 100%;
+}
+
+.single-article__articles-list {
+    flex-basis: (1360 - 688)/1360 * 100%;
+}
+
+
+.single-article__article-content {
+    flex-basis: (1008 - 40 - 312)/ (1008 - 40) * 100%;
+    padding: 22px 0;
+    height: 100%;
+    padding-left: 36px;
+
+}
+
+.single-article__articles-list-item {
+    &:not(:last-child) {
+        padding-bottom: 36px;
+    }
+}
+
+
+.single-article__article-actions {
+    .actions__list {
+        justify-content: space-between;
+    }
+}
+
+.single-article__title {
+    max-width: 744/955 * 100%;
+
+}
+
+
+
+.single-article__social {
+    display: flex;
+    align-items: center;
+}
+
+.single-article__social-title {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 16/14;
+    padding-right: 15px;
+}
+
+.single-article__social-list {
+    display: flex;
+    align-items: center;
+}
+
+.single-article__social-list-item {
+    &:not(:last-child) {
+        padding-right: 15px;
+    }
+
+    .ico {
+        width: 15px;
+        height: 15px;
+        min-width: 15px;
+
+        svg {
+            width: 15px;
+            height: 15px;
+            min-width: 15px;
+            fill: @font-color;
+            transition: fill 0.25s linear;
+        }
+
+
+        &:hover {
+            svg {
+                fill: @main-color;
+            }
+        }
+    }
+
+}
+
+.single-article__actions {
+    .actions__list {
+        justify-content: space-between;
+    }
+}
+
+.single-article__info {
+    padding-bottom: 35px;
+}
+
+
+//////
+
+@media screen and(max-width: 1200px) {}
+
+@media screen and(max-width: 992px) {
+
+    .single-article__sidebar {
+        padding-left: 12px;
+    }
+
+    .single-article__sidebar-layer {
+        padding: 15px 20px;
+    }
+}
+
+
+@media screen and(max-width: 768px) {
+    .single-article__container {
+        flex-wrap: wrap;
+    }
+
+    .single-article__main {
+        flex-basis: 100%;
+        padding-right: 0;
+        padding-bottom: 60px;
+    }
+
+    .single-article__sidebar {
+        flex-basis: 100%;
+        padding-left: 0;
+    }
+}
+
+
+
+@media screen and(max-width: 576px) {
+    .single-article__actions {
+        .actions__list-item {
+            padding-bottom: 15px;
+        }
+    }
+}

@@ -1,0 +1,198 @@
+.cart.page
+    .cart__layer.page__layer
+        .center
+            +breadcrumbs(['Головна', 'Кошик'])
+            .f-container.cart__container
+                .cart__main.page__main
+                    .cart__table
+                        .cart__thead
+                            .cart__tr
+                                .cart__th
+                                    |Товар
+                                .cart__th
+                                    |Ціна
+                                .cart__th
+                                    |Кількість
+                                .cart__th
+                                    |Сума
+                                .cart__th
+                        .cart__tbody
+                            .cart__tr
+                                .cart__td.f-container
+                                    .cart__block_mobile.desktop-hidden.cart__block_mobile-top
+                                        div(class=`cart__status_mobile green status`)
+                                            i(class=`ico cart__status-ico_mobile status__ico`)
+                                                +svg2('check')
+                                            p(class=`cart__status-text_mobile status__text`)
+                                                |В наявності
+                                    .cart__goods-image-layer
+                                        img.cart__goods-image(src="img/video-preview.png", alt="Image")
+                                    .cart__goods-description
+                                        h3.cart__goods-title
+                                            |Pandora DWM-210
+                                        p.cart__goods-text
+                                            |Автомобільна протиугінна GSM-Bluetooth система
+                                        .cart__block_mobile.desktop-hidden
+                                            p.cart__price.cart__price_mobile
+                                                |13 655 грн./шт.
+                                            .cart__group.amount.cart__group_mobile
+                                                i.ico.amount__ico(onclick="this.parentNode.querySelector('[type=number]').stepUp();")
+                                                    +svg2('arr-top')
+                                                input(class=`cart__field cart__field_mobile amount__field` type='number' min="0" value="1")
+                                                i.ico.amount__ico(onclick="this.parentNode.querySelector('[type=number]').stepDown();")
+                                                    +svg2('arr-down')
+                                .cart__td
+                                    p.cart__price
+                                        |13 655 грн.
+                                    span.cart__price-text
+                                        |ціна за 1 шт.
+                                .cart__td
+                                    .cart__group.amount
+                                        i.ico.amount__ico(onclick="this.parentNode.querySelector('[type=number]').stepUp();")
+                                            +svg2('arr-top')
+                                        input(class=`cart__field amount__field` type='number' min="0" value="1")
+                                        i.ico.amount__ico(onclick="this.parentNode.querySelector('[type=number]').stepDown();")
+                                            +svg2('arr-down')
+                                .cart__td
+                                    p.cart__price
+                                        |13 655 грн.
+                                .cart__td
+                                    i.ico.cart__close-ico
+                                        +svg2('close')
+                            .cart__tr
+                                .cart__td.f-container
+                                    .cart__block_mobile.desktop-hidden.cart__block_mobile-top
+                                        div(class=`cart__status_mobile green status`)
+                                            i(class=`ico cart__status-ico_mobile status__ico`)
+                                                +svg2('check')
+                                            p(class=`cart__status-text_mobile status__text`)
+                                                |В наявності
+                                    .cart__goods-image-layer
+                                        img.cart__goods-image(src="img/card-img-2.png", alt="Image")
+                                    .cart__goods-description
+                                        h3.cart__goods-title
+                                            |Pandora DWM-210
+                                        p.cart__goods-text
+                                            |Автомобільна протиугінна GSM-Bluetooth система
+                                        .cart__block_mobile.desktop-hidden
+                                            p.cart__price.cart__price_mobile
+                                                |13 655 грн./шт.
+                                            .cart__group.amount.cart__group_mobile
+                                                i.ico.amount__ico(onclick="this.parentNode.querySelector('[type=number]').stepUp();")
+                                                    +svg2('arr-top')
+                                                input(class=`cart__field cart__field_mobile amount__field` type='number' min="0" value="1")
+                                                i.ico.amount__ico(onclick="this.parentNode.querySelector('[type=number]').stepDown();")
+                                                    +svg2('arr-down')
+                                .cart__td
+                                    p.cart__price
+                                        |13 655 грн.
+                                    span.cart__price-text
+                                        |ціна за 1 шт.
+                                .cart__td
+                                    .cart__group.amount
+                                        i.ico.amount__ico(onclick="this.parentNode.querySelector('[type=number]').stepUp();")
+                                            +svg2('arr-top')
+                                        input(class=`cart__field amount__field` type='number' min="0" value="1")
+                                        i.ico.amount__ico(onclick="this.parentNode.querySelector('[type=number]').stepDown();")
+                                            +svg2('arr-down')
+                                .cart__td
+                                    p.cart__price
+                                        |13 655 грн.
+                                .cart__td
+                                    i.ico.cart__close-ico
+                                        +svg2('close')
+                            .cart__tr
+                                .cart__td.f-container
+                                    .cart__block_mobile.desktop-hidden.cart__block_mobile-top
+                                        div(class=`cart__status_mobile green status`)
+                                            i(class=`ico cart__status-ico_mobile status__ico`)
+                                                +svg2('check')
+                                            p(class=`cart__status-text_mobile status__text`)
+                                                |В наявності
+                                    .cart__goods-image-layer
+                                        img.cart__goods-image(src="img/card-img-3.png", alt="Image")
+                                    .cart__goods-description
+                                        h3.cart__goods-title
+                                            |Pandora DWM-210
+                                        p.cart__goods-text
+                                            |Автомобільна протиугінна GSM-Bluetooth система
+                                        .cart__block_mobile.desktop-hidden
+                                            p.cart__price.cart__price_mobile
+                                                |13 655 грн./шт.
+                                            .cart__group.amount.cart__group_mobile
+                                                i.ico.amount__ico(onclick="this.parentNode.querySelector('[type=number]').stepUp();")
+                                                    +svg2('arr-top')
+                                                input(class=`cart__field cart__field_mobile amount__field` type='number' min="0" value="1")
+                                                i.ico.amount__ico(onclick="this.parentNode.querySelector('[type=number]').stepDown();")
+                                                    +svg2('arr-down')
+                                .cart__td
+                                    p.cart__price
+                                        |13 655 грн.
+                                    span.cart__price-text
+                                        |ціна за 1 шт.
+                                .cart__td
+                                    .cart__group.amount
+                                        i.ico.amount__ico(onclick="this.parentNode.querySelector('[type=number]').stepUp();")
+                                            +svg2('arr-top')
+                                        input(class=`cart__field amount__field` type='number' min="0" value="1")
+                                        i.ico.amount__ico(onclick="this.parentNode.querySelector('[type=number]').stepDown();")
+                                            +svg2('arr-down')
+                                .cart__td
+                                    p.cart__price
+                                        |13 655 грн.
+                                .cart__td
+                                    i.ico.cart__close-ico
+                                        +svg2('close')
+                    .cart__buttons
+                        .cart__btn
+                            a.main-btn.main-btn_transparent(href="#")
+                                span.main-btn__text
+                                    |Продовжити покупку
+                        button.cart__clean-btn
+                            i.ico.cart__clean-btn-ico
+                                    +svg2('close')
+                            span.cart__clean-btn-text
+                                |Очистити кошик
+                aside.cart__sidebar.sidebar_size_l
+                    .cart__sidebar-layer
+                        .cart__sidebar-header.sidebar__header
+                            .cart__sidebar-goods.sidebar__section
+                                p.cart__sidebar-goods-text.sidebar__section-title
+                                    |В кошику
+                                .cart__sidebar-goods-count.sidebar__section-count
+                                    span
+                                        |3 
+                                    | товари
+                        .cart__sidebar-body.sidebar__body
+                            ul.sidebar__order-list
+                                li.sidebar__order-list-item
+                                    .cart__sidebar-order-text.sidebar__section-text
+                                        |Товарів на суму
+                                    .cart__sidebar-order-count.sidebar__section-count
+                                        span
+                                            |68 275 
+                                        |грн.
+                                li.sidebar__order-list-item
+                                    .cart__sidebar-order-text.sidebar__section-text
+                                        |Знижки
+                                    .cart__sidebar-order-count.sidebar__section-count
+                                        span
+                                            |2000 
+                                        | грн.
+                        .cart__sidebar-footer.sidebar__footer
+                            .sidebar__total.sidebar__section
+                                p.cart__sidebar-total-text.sidebar__section-title
+                                    |Всього
+                                .cart__sidebar-total-count.sidebar__section-count
+                                    span
+                                        |65 275 
+                                    |грн.
+                            .cart__sidebar-buttons.sidebar__buttons
+                                .cart__sidebar-btn.sidebar__btn
+                                    a.main-btn(href="/order.html")
+                                        span.main-btn__text
+                                            |Оформити замовлення
+                                .cart__sidebar-btn.sidebar__btn
+                                    button.main-btn.main-btn_transparent.one-click-buy-button
+                                        span.main-btn__text
+                                            |Купити в 1 клік

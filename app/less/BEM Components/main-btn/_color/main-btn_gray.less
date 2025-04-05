@@ -1,0 +1,36 @@
+.main-btn_gray {
+    background-color: @transparent;
+    color: @gray2;
+    border: 1px solid @gray5;
+
+
+    &:hover {
+        background-color: @gray5;
+        color: @white;
+
+        .ico {
+            svg {
+                fill: @white;
+            }
+        }
+    }
+
+    .ico {
+        width: 10px;
+        height: 10px;
+        min-width: 10px;
+        position: relative;
+
+        svg {
+            width: 10px;
+            height: 10px;
+            min-width: 10px;
+            fill: @gray2;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: fill 0.25s linear;
+        }
+    }
+}

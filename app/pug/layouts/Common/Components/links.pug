@@ -1,0 +1,6 @@
+mixin links(clazz, list)
+            ol(class=`${ clazz ? clazz + '__list' : ''} links__list`)
+                each item, index in list
+                    li(class=`${ clazz ? clazz + '__list-item' : ''} links__list-item`)
+                        a(class=`${ clazz ? clazz + '__item' : ''} links__item` href=`#${item.href}`) #{(index + 1)  + "." + " " + item.text}
+                                

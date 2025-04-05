@@ -1,0 +1,313 @@
+@import url("app/less/Common/_var.less");
+@import url("app/less/Common/_mixins.less");
+@import url("app/less/Common/_fonts.less");
+@import url("app/less/Common/_init-sprites.less");
+@import url("app/less/Common/_animations.less");
+
+
+html {
+  font-size: 14px;
+  scroll-behavior: smooth;
+
+}
+
+html,
+body {
+  color: @font-color;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+::selection {
+  background: rgba(@main-color, 0.9);
+  color: @white;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1rem;
+  font-variant-ligatures: normal;
+  font-variant-east-asian: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-stretch: 100%;
+  font-style: normal;
+  font-weight: 400;
+  color: @font-color;
+  letter-spacing: 0.2px;
+  line-height: 14.3/10;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+
+
+}
+
+
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  // line-height: 1;
+}
+
+img,
+picture,
+source {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  overflow-wrap: break-word;
+}
+
+ul,
+li,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  color: @font-color;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  outline: none;
+  border: none;
+  text-align: center;
+}
+
+
+label {
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  background: unset;
+  border: none;
+}
+
+
+main {
+  width: 100%;
+}
+
+
+.ico {
+  display: block;
+}
+
+
+.hidden {
+  display: none;
+}
+
+//|||||||||||||||||||COMMON ELEMENTS|||||||||||||||||||//
+
+
+
+//|||||||||||||||||||COMMON ELEMENTS END|||||||||||||||||||//
+
+
+body [class*="desktop-hidden"] {
+  display: none;
+}
+
+.grecaptchaError {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: red;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  text-align: center;
+  display: none;
+}
+
+
+
+
+
+@media screen and(max-width: 1200px) {}
+
+@media screen and(max-width: 992px) {
+
+}
+
+
+@media screen and(max-width: 768px) {
+
+  html {
+    font-size: 12px;
+
+  }
+}
+
+
+
+@media screen and(max-width: 576px) {
+  html {
+    font-size: 10px;
+
+  }
+
+  body [class*="desktop-hidden"] {
+    display: block;
+  }
+
+}
+
+
+
+
+
+
+
+
+@import url("app/less/BEM Components/center/center.less");
+@import url("app/less/BEM Components/center/_size/center_size_l.less");
+@import url("app/less/BEM Components/center/_size/center_size_s.less");
+@import url("app/less/BEM Components/f-container/f-container.less");
+@import url("app/less/BEM Components/title/__type/title__h1.less");
+@import url("app/less/BEM Components/title/__type/title__h2.less");
+@import url("app/less/BEM Components/title/__type/title__h3.less");
+@import url("app/less/BEM Components/title/title.less");
+@import url("app/less/BEM Components/checkbox/checkbox.less");
+@import url("app/less/BEM Components/breadcrumbs/breadcrumbs.less");
+@import url("app/less/BEM Components/burger/burger.less");
+@import url("app/less/BEM Components/logo/logo.less");
+@import url("app/less/BEM Components/menu/menu.less");
+@import url("app/less/BEM Components/form/form.less");
+@import url("app/less/BEM Components/menu/_mobile/menu_mobile.less");
+@import url("app/less/BEM Components/main-btn/main-btn.less");
+@import url("app/less/BEM Components/main-btn/_color/main-btn_transparent.less");
+@import url("app/less/BEM Components/main-btn/_color/main-btn_gray.less");
+@import url("app/less/BEM Components/main-btn/_color/main-btn_white.less");
+@import url("app/less/BEM Components/control-btn/control-btn.less");
+@import url("app/less/BEM Components/text/text.less");
+@import url("app/less/BEM Components/tabs/tabs.less");
+@import url("app/less/BEM Components/text/text.less");
+@import url("app/less/BEM Components/pagination/pagination.less");
+@import url("app/less/BEM Components/footer/footer.less");
+@import url("app/less/BEM Components/actions/actions.less");
+@import url("app/less/BEM Components/actions/_size/actions_small.less");
+@import url("app/less/BEM Components/sidebar/sidebar.less");
+@import url("app/less/BEM Components/sidebar/_size/sidebar_size_l.less");
+
+
+
+@import url("app/less/Pages/Index/Page Components/_preview.less");
+@import url("app/less/Pages/Index/Page Components/_installation-center.less");
+@import url("app/less/Pages/Index/Page Components/_why-we.less");
+@import url("app/less/Pages/Index/Page Components/_news.less");
+
+
+@import url("app/less/Pages/About/Page Components/_about.less");
+
+
+@import url("app/less/Pages/Blog/Page Components/_blog.less");
+
+
+@import url("app/less/Pages/Catalog/Page Components/_catalog.less");
+
+
+@import url("app/less/Pages/Cart/Page Components/_cart.less");
+
+
+@import url("app/less/Pages/Contact/Page Components/_contact.less");
+
+
+@import url("app/less/Pages/Single/Page Components/_single.less");
+
+
+@import url("app/less/Pages/Single Article/Page Components/_single-article.less");
+
+
+@import url("app/less/Pages/Compare/Page Components/_compare.less");
+
+
+@import url("app/less/Pages/Portfolio/Page Components/_portfolio.less");
+@import url("app/less/Pages/Portfolio/Page Components/_portfolio-slider.less");
+
+
+@import url("app/less/Pages/Portfolio Single/Page Components/_portfolio-single.less");
+
+
+@import url("app/less/Pages/Order/Page Components/_order.less");
+
+
+@import url("app/less/Pages/Payment And Delivery/Page Components/_payment-and-delivery.less");
+
+
+@import url("app/less/Pages/Warranty And Service/Page Components/_warranty-and-service.less");
+
+
+@import url("app/less/Pages/Installation Center/Page Components/_installation-center.less");
+
+
+@import url("app/less/Pages/Catalog Full Width/Page Components/_catalog-full-width.less");
+
+
+
+@import url("app/less/Common/Components/header.less");
+@import url("app/less/Common/Components/amount.less");
+@import url("app/less/Common/Components/compare-btn.less");
+@import url("app/less/Common/Components/brands.less");
+@import url("app/less/Common/Components/card.less");
+@import url("app/less/Common/Components/cart-popup.less");
+@import url("app/less/Common/Components/contacts.less");
+@import url("app/less/Common/Components/feedback.less");
+@import url("app/less/Common/Components/filter.less");
+@import url("app/less/Common/Components/cards-slider.less");
+@import url("app/less/Common/Components/seo-text.less");
+@import url("app/less/Common/Components/items.less");
+@import url("app/less/Common/Components/popup-tippy.less");
+@import url("app/less/Common/Components/production-slider.less");
+@import url("app/less/Common/Components/widget-articles.less");
+@import url("app/less/Common/Components/widget-comments.less");
+@import url("app/less/Common/Components/subscribe-form.less");
+@import url("app/less/Common/Components/sidebar-banner.less");
+@import url("app/less/Common/Components/sidebar.less");
+@import url("app/less/Common/Components/status.less");
+@import url("app/less/Common/Components/footer.less");
+@import url("app/less/Common/Components/pg-scroll.less");
+@import url("app/less/Common/Components/pg-select.less");
+@import url("app/less/Common/Components/links.less");
+@import url("app/less/Common/Components/page.less");
+@import url("app/less/Common/Components/accordeon.less");
+@import url("app/less/Common/Components/info.less");
+@import url("app/less/Common/Components/faq.less");
+
+
+@import url("app/less/Common/_media.less");
+@import url("app/less/sprite.less");

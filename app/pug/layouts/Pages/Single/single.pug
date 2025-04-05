@@ -1,0 +1,454 @@
+.single.page
+    .single__layer.page__layer
+        .center
+            +breadcrumbs(['Головна', 'Автосигналізації', 'Pandect X-1900 3G BT'])
+            .f-container.single__container
+                .single__block_mobile.desktop-hidden
+                    h2.single__title_mobile
+                        |Pandect X-1900 3G BT
+                    div(class=`single__status_mobile green status`)
+                        i(class=`ico single__status-ico_mobile status__ico`)
+                            +svg2('check')
+                        p(class=`single__status-text_mobile status__text`)
+                            |В наявності
+                .single__preview-layer
+                    .single__preview
+                            ul(class=`card__labels`)
+                                li(class=`card__label`)
+                                    p(class=`card__label-text hit-sale`)
+                                        |Хіт продаж
+                                li(class=`card__label`)
+                                    p(class=`card__label-text discount`)
+                                        |Знижка
+                                li(class=`card__label`)
+                                    p(class=`card__label-text installation`)
+                                        |Установка
+                                li(class=`card__label`)
+                                    p(class=`card__label-text novelty`)
+                                        |Новинка
+                            #image-slider.splide.single__image-slider
+                                .splide__track.single__image-track
+                                    ul.splide__list.single__image-list
+                                        li.splide__slide.single__image-list-item
+                                            img.single__image(src='img/single-image-1.png')
+                                        li.splide__slide.single__image-list-item
+                                            img.single__image(src='img/single-image-1.png')
+                                        li.splide__slide.single__image-list-item
+                                            img.single__image(src='img/single-image-1.png')
+                                        li.splide__slide.single__image-list-item
+                                            img.single__image(src='img/single-image-1.png')
+                                        li.splide__slide.single__image-list-item
+                                            img.single__image(src='img/single-image-1.png')
+                                        li.splide__slide.single__image-list-item
+                                            img.single__image(src='img/single-image-1.png')
+                                        li.splide__slide.single__image-list-item
+                                            img.single__image(src='img/single-image-1.png')
+                                        li.splide__slide.single__image-list-item
+                                            img.single__image(src='img/single-image-1.png')
+                            #thumbnail-slider.splide.single__thumbnail-slider
+                                .splide__track.single__thumbnail-track
+                                    ul.splide__list.single__thumbnail-list
+                                        li.splide__slide.single__thumbnail-list-item
+                                            img.single__thumbnail(src='img/single-image-2.png')
+                                        li.splide__slide.single__thumbnail-list-item
+                                            img.single__thumbnail(src='img/single-image-2.png')
+                                        li.splide__slide.single__thumbnail-list-item
+                                            img.single__thumbnail(src='img/single-image-3.png')
+                                        li.splide__slide.single__thumbnail-list-item
+                                            img.single__thumbnail(src='img/single-image-4.png')
+                                        li.splide__slide.single__thumbnail-list-item
+                                            img.single__thumbnail(src='img/single-image-2.png')
+                                        li.splide__slide.single__thumbnail-list-item
+                                            img.single__thumbnail(src='img/single-image-2.png')
+                                        li.splide__slide.single__thumbnail-list-item
+                                            img.single__thumbnail(src='img/single-image-3.png')
+                                        li.splide__slide.single__thumbnail-list-item
+                                            img.single__thumbnail(src='img/single-image-4.png')
+                            button(class=`single__compare compare-btn`)
+                                i.ico
+                                    +svg2('comparison')
+                .single__description-layer
+                    .single__description
+                        h2.single__title
+                            |Pandect X-1900 3G BT
+                        div(class=`single__status green status`)
+                            i(class=`ico single__status-ico status__ico`)
+                                +svg2('check')
+                            p(class=`single__status-text status__text`)
+                                |В наявності
+                        .single__timer
+                            p.single__timer-text
+                                |До кінця акції залишилось:
+                            #clockdiv.single__clockdiv
+                                div.single__time-group 
+                                    span.single__days.days.single__time 
+                                    p.single__time-text
+                                        |Днів
+                                    span.single__separator
+                                        |:
+                                div.single__time-group 
+                                    span.single__hours.hours.single__time 
+                                    p.single__time-text
+                                        |Годин
+                                    span.single__separator
+                                        |:
+                                div.single__time-group 
+                                    span.single__minutes.minutes.single__time 
+                                    p.single__time-text
+                                        |Хвилин
+                                    span.single__separator
+                                        |:
+                                div.single__time-group 
+                                    span.single__seconds.seconds.single__time 
+                                    p.single__time-text
+                                        |Секунд
+                        div.single__price-old-wrapper
+                            p.single__price-old-title
+                                |Стара ціна
+                            p.single__price-old
+                                |15.000 грн./шт
+                        div.single__price-wrapper
+                            p.single__price-title
+                                |Нова ціна
+                            p.single__price
+                                |13 655 грн. / шт
+                        .single__discount
+                            span.single__discount-amount
+                                |-15%
+                            p.single__discount-saving
+                                |Економія 200 грн.
+                        .single__amount-layer
+                            p.single__amount-text
+                                |Кількість:
+                            .single__group.amount
+                                i.ico.amount__ico(onclick="this.parentNode.querySelector('[type=number]').stepUp();")
+                                    +svg2('arr-top')
+                                input(class=`cart__field amount__field` type='number' min="0" value="1")
+                                i.ico.amount__ico(onclick="this.parentNode.querySelector('[type=number]').stepDown();")
+                                    +svg2('arr-down')
+                        .single__buttons
+                            button(class=`single__button main-btn single__cart-button` disabled)
+                                i.ico
+                                    +svg2('cart-bag')
+                                span
+                                    |До кошика
+                            a(class=`single__button main-btn main-btn_transparent one-click-buy-button` href="#")
+                                span
+                                    |Купити в 1 клік
+            .single__info-block
+                .single__tabs.tabs
+                    span.single__tab.active.tab(data-tab="description")
+                        |Опис 
+                    span.single__tab.tab(data-tab="characteristics")
+                        |Характеристики
+                .single__goods-description(data-section="description")
+                    p.single__goods-paragraph
+                        |Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus labore autem quos cupiditate commodi! Tempore nostrum nulla veritatis sed, libero cumque sequi id nobis optio ratione exercitationem adipisci tenetur harum.
+                    p.single__goods-paragraph
+                        |Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus labore autem quos cupiditate commodi! Tempore nostrum nulla veritatis sed, libero cumque sequi id nobis optio ratione exercitationem adipisci tenetur harum.
+                    .single__accordeon
+                        p.single__accordeon-title(data-accordeon="#$1")
+                            |Базовий блок системи
+                            i.ico
+                                +svg2('arr-down')
+                        p.single__accordeon-text(data-fields="#$1" data-padding="25")
+                            |Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius delectus minima mollitia quisquam accusamus rem saepe, assumenda nemo eum culpa distinctio veniam officia eveniet enim quo vero unde at fugiat!
+                    .single__accordeon
+                        p.single__accordeon-title(data-accordeon="#$2")
+                            |Базовий блок системи
+                            i.ico
+                                +svg2('arr-down')
+                        p.single__accordeon-text(data-fields="#$2" data-padding="25")
+                            |Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius delectus minima mollitia quisquam accusamus rem saepe, assumenda nemo eum culpa distinctio veniam officia eveniet enim quo vero unde at fugiat!
+                    .single__accordeon
+                        p.single__accordeon-title(data-accordeon="#$3")
+                            |Базовий блок системи
+                            i.ico
+                                +svg2('arr-down')
+                        p.single__accordeon-text(data-fields="#$3" data-padding="25")
+                            |Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius delectus minima mollitia quisquam accusamus rem saepe, assumenda nemo eum culpa distinctio veniam officia eveniet enim quo vero unde at fugiat!
+                    .single__accordeon
+                        p.single__accordeon-title(data-accordeon="#$4")
+                            |Базовий блок системи
+                            i.ico
+                                +svg2('arr-down')
+                        p.single__accordeon-text(data-fields="#$4" data-padding="25")
+                            |Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius delectus minima mollitia quisquam accusamus rem saepe, assumenda nemo eum culpa distinctio veniam officia eveniet enim quo vero unde at fugiat!
+                .single__goods-characteristics(data-section="characteristics")
+                    .single__table    
+                        .single__tbody
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |GPS-модуль
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |GSM-модуль
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |LBS- координати з базових станцій GSM оператора
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Mini-USB та micro-USB порт для програмування та оновлення програмного забезпечення
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Автозапуск (за командою, за таймером, за температурою, за бортовою мережею)
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Автоматична постановка під охорону
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Бездротове реле блокування (підтримує BTR-101)
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Опціонально
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Безконтактна мітка імобілайзера BT-760
+                                .single__td
+                                    p.single__characteristic-value
+                                        |2
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Безшумна постановка / зняття охорони
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Вібраційне сповіщення на брелок
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Ні
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Вбудований імобілайзер
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Вбудований акселерометр (датчик удару, нахилу, руху)
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Використання телефона як мітки для авторизації власника (по Bluetooth)
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Діалогове кодування радіосигналу 2.4-2.5 ГГц
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Дальність керування по брелоку (опціонально, брелок D-030)
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Ні
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Дальність оповіщення по брелоку (опціонально, брелок D-030)
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Ні
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Дистанційне блокування двигуна
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Затримка постановки на охорону
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Захист від розбійного нападу (ANTI-HI-JACK)
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Керування в режимі «SLAVE» з додатковим захистом по радіомітці
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                    .single__table
+                        .single__tbody
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Керування передпусковим підігрівачем
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Кнопка SOS на брелоку
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Ні
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |LBS- координати з базових станцій GSM оператора
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Керування склопідйомниками (підтримує DWM-210, DWM-502)
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Опціонально
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Підтримка безключового автозапуску («ByPass», «CLONE»)
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Контроль рівня палива
+                                .single__td
+                                    p.single__characteristic-value
+                                        |CAN
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Мобільний додаток і налаштування по Bluetooth BT
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Модуль 3G/GPRS
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Модуль автозапуску
+                                .single__td
+                                    p.single__characteristic-value
+                                        |RMD-5
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Підключення по 2xCAN / LIN-шині
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |ПІН-код для аварійної деактивації
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Пошук машини на стоянці
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Радіомодуль моторного відсіку (радіомодуль RHM Bluetooth)
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Опціонально
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Режим «ПАНІКА»
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Режим тихої охорони
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Сервісний режим ТО
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Силові аналогові виходи
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Слот для сім карти
+                                .single__td
+                                    p.single__characteristic-value
+                                        |1
+                            .single__tr
+                                .single__td
+                                    p.single__characteristic-key
+                                        |Турботаймер
+                                .single__td
+                                    p.single__characteristic-value
+                                        |Так

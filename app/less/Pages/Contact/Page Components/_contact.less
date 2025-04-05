@@ -1,0 +1,119 @@
+.contact__container {
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+.contact__layer {
+    position: relative;
+
+
+    &>* {
+        position: relative;
+        z-index: 1;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 70/(705 - 191) * 100%;
+        right: 195/1920 * 100%;
+        width: 80px;
+        height: 80px;
+        background: url('../img/geometric2.png') no-repeat center/contain;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 440/(705 - 191) * 100%;
+        left: 71/1920 * 100%;
+        width: 168px;
+        height: 168px;
+        background: url('../img/geometric3.png') no-repeat center/contain;
+    }
+}
+
+
+.contact__title {
+    font-weight: 500;
+    font-size: 24/14 * 1rem;
+    line-height: 44/24;
+    padding-bottom: 17px;
+}
+
+
+.contact__main {
+    flex-basis: (1360 - (428 + 36/2))/1360 * 100%;
+    padding-right: 36px/2;
+}
+
+.contact__main-layer {
+    height: 100%;
+}
+
+
+.contact__sidebar-layer {
+    padding: 40px 25px;
+    background-color: @gray7;
+    padding-left: 45px;
+    border-radius: 4px;
+
+}
+
+
+.contact__sidebar-info-list-item {
+    cursor: pointer;
+    .contacts__text {
+        color: @main-color;
+
+    }
+
+    &:hover {
+        .contacts__text {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+////////////
+
+
+///////
+
+@media screen and(max-width: 1200px) {}
+
+@media screen and(max-width: 992px) {
+
+    .contact__layer:before {
+        height: 100%;
+    }
+
+}
+
+
+@media screen and(max-width: 768px) {
+
+    .contact__main-layer {
+        height: 403px;
+    }
+
+    .contact__container {
+        flex-wrap: wrap;
+    }
+
+    .contact__main {
+        flex-basis: 100%;
+        padding-right: 0;
+        padding-bottom: 30px;
+    }
+
+    .contact__sidebar {
+        flex-basis: 100%;
+        padding-left: 0;
+    }
+
+}
+
+
+@media screen and(max-width: 576px) {}

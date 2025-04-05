@@ -1,0 +1,60 @@
+-
+    const list = [
+        {
+            text: 'Оплата і доставка',
+            href: 'payment-and-delivery'
+        },
+        {
+            text: 'Строки виконання замовлення (доставка)',
+            href: 'delivery'
+        },
+        {
+            text: 'Ціна і порядок оплати',
+            href: 'payment'
+        },
+    ]
+
+
+.payment-and-delivery.page
+    .payment-and-delivery__layer.page__layer
+        .center
+            +breadcrumbs(['Головна', 'Оплата і доставка'])
+            .f-container.payment-and-delivery__container
+                .payment-and-delivery__main.page__main
+                    .payment-and-delivery__main-layer
+                        article.seo-text__article
+                            section.seo-text__section.animate(id="payment-and-delivery" data-animation="fadeInTop")
+                                h2.seo-text__title.payment-and-delivery__title
+                                    |Оплата і доставка
+                                p.seo-text__paragraph
+                                    |Додаток №1 До Публічного договору купівлі-продажу
+                            section.seo-text__section.animate(id="delivery" data-animation="fadeInTop")
+                                h2.seo-text__title.payment-and-delivery__title
+                                    |Строки виконання замовлення (доставка)
+                                ol.seo-text__ordered-list
+                                    li.seo-text__list-item
+                                        |1.1 Загальний строк виконання Замовлення становить: 5 днів.
+                                    li.seo-text__list-item
+                                        |1.2. Загальним строком виконання Замовлення, яке складається з декількох Товарів, що мають різні строки виконання, є найбільший строк.
+                            section.seo-text__section.animate(id="payment" data-animation="fadeInTop")
+                                h2.seo-text__title.payment-and-delivery__title
+                                    |Ціна і порядок оплати
+                                ol.seo-text__ordered-list
+                                    li.seo-text__list-item
+                                        |2.1 Загальний строк виконання Замовлення становить: 5 днів.
+                                    li.seo-text__list-item
+                                        |2.2. Загальним строком виконання Замовлення, яке складається з декількох Товарів, що мають різні строки виконання, є найбільший строк.
+                                    li.seo-text__list-item
+                                        |2.3. Загальним строком виконання Замовлення, яке складається з декількох Товарів, що мають різні строки виконання, є найбільший строк.
+                                    li.seo-text__list-item
+                                        |2.4. Загальним строком виконання Замовлення, яке складається з декількох Товарів, що мають різні строки виконання, є найбільший строк.
+                                    li.seo-text__list-item
+                                        |2.5. Загальним строком виконання Замовлення, яке складається з декількох Товарів, що мають різні строки виконання, є найбільший строк.
+                                    li.seo-text__list-item
+                                        |2.6. Загальним строком виконання Замовлення, яке складається з декількох Товарів, що мають різні строки виконання, є найбільший строк.
+                                    li.seo-text__list-item
+                                        |2.7. Загальним строком виконання Замовлення, яке складається з декількох Товарів, що мають різні строки виконання, є найбільший строк.
+                aside.payment-and-delivery__sidebar.sidebar.contacts
+                    .payment-and-delivery__sidebar-layer
+                        +links('payment-and-delivery', list)
+

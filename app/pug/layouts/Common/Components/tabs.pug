@@ -1,0 +1,18 @@
+.tabs.blog-tabs
+	ul.tabs__list.blog-tabs__list(data-active="all")
+		li.tabs__list-item.blog-tabs__list-item.active(data-tab="all")
+			|Все статьи
+			span.tabs__counter.blog-tabs__counter
+				|388
+		li.tabs__list-item.blog-tabs__list-item(data-tab="popular")
+			|Популярные
+			span.tabs__counter.blog-tabs__counter
+				|244
+		li.tabs__list-item.blog-tabs__list-item(data-tab="resent")
+			|Недавние
+			- const num = 388 - 244
+			span.tabs__counter.blog-tabs__counter= num
+		li.tabs__list-item.slider
+			span.slider__before
+			span.slider__after
+				

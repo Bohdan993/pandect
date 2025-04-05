@@ -1,0 +1,270 @@
+.order.page
+    .order__layer.page__layer
+        .center
+            +breadcrumbs(['Головна', 'Кошик', 'Оформлення замовлення'])
+            .f-container.order__container
+                .order__main.page__main
+                    form.order__form(id="order-form")
+                        fieldset(class=`order__fieldset fieldset form__row`)
+                            legend.legend.order__form-legend
+                                |Дані одержувача
+                            div.order__form-row
+                                div(class=`order__form-group`)
+                                    p.order__form-field-name
+                                        |Ім'я
+                                        span
+                                            |*
+                                    input( class=`order__form-field form__field form__field-item` type='text' placeholder='ім\'я' name='name')
+                                div(class=`order__form-group`)
+                                    p.order__form-field-name
+                                        |E-mail
+                                    input( class=`order__form-field form__field form__field-item` type='email' placeholder='Email' name='email')
+                            div.order__form-row
+                                div(class=`order__form-group`)
+                                    p.order__form-field-name
+                                        |Номер телефона
+                                        span
+                                            |*
+                                    input( class=`order__form-field form__field form__field-item` type='tel' placeholder='телефон' name='phone')
+                        fieldset(class=`order__fieldset fieldset form__row`)
+                            legend.legend.order__form-legend
+                                |Спосіб доставки
+                            div(class=`filter__group order__form-filter`)
+                                input(class=`filter__field` type='radio' name='delivery' id="self-pickup" value="self-pickup" data-accordeon="self-pickup")
+                                label(for="self-pickup")
+                                    |Самовивіз з магазину - Безкоштовно
+                            .order__form-filter-fields(data-fields="self-pickup")
+                                div.order__form-row
+                                    div(class=`order__form-group`)
+                                        p.order__form-field-name
+                                            |Ім'я
+                                            span
+                                                |*
+                                        input( class=`order__form-field form__field form__field-item` type='text' placeholder='ім\'я' name='name')
+                                    div(class=`order__form-group`)
+                                        p.order__form-field-name
+                                            |E-mail
+                                        input( class=`order__form-field form__field form__field-item` type='email' placeholder='Email' name='email')
+                            div(class=`filter__group order__form-filter`)
+                                input(class=`filter__field` type='radio' name='delivery' id="gunsel" value="gunsel" data-accordeon="gunsel")
+                                label(for="gunsel")
+                                    |Гюнсел - Згідно тарифу перевізника
+                            .order__form-filter-fields(data-fields="gunsel")
+                                div.order__form-row
+                                    div(class=`order__form-group`)
+                                        p.order__form-field-name
+                                            |Ім'я
+                                            span
+                                                |*
+                                        input( class=`order__form-field form__field form__field-item` type='text' placeholder='ім\'я' name='name')
+                                    div(class=`order__form-group`)
+                                        p.order__form-field-name
+                                            |E-mail
+                                        input( class=`order__form-field form__field form__field-item` type='email' placeholder='Email' name='email')
+                            div(class=`filter__group order__form-filter`)
+                                input(class=`filter__field` type='radio' name='delivery' id="avtolyuks" value="avtolyuks" data-accordeon="avtolyuks")
+                                label(for="avtolyuks")
+                                    |Автолюкс - Згідно тарифу перевізника
+                            .order__form-filter-fields(data-fields="avtolyuks")
+                                div.order__form-row
+                                    div(class=`order__form-group order__textarea-group`)
+                                        p.order__form-field-name
+                                            |Дані для відправки Автолюкс
+                                        textarea( class=`order__form-field form__field form__field-item` placeholder='Введіть коментар' name='avtolyuks-comment' rows=`${Math.ceil((144 - (13 * 2))/24)}`)
+                            div(class=`filter__group order__form-filter`)
+                                input(class=`filter__field` type='radio' name='delivery' id="nova-poshta" value="nova-poshta" data-accordeon="nova-poshta" checked)
+                                label(for="nova-poshta")
+                                    |Нова Пошта
+                            .order__form-filter-fields(data-fields="nova-poshta")
+                                div.order__form-row
+                                    div(class=`order__form-group`)
+                                        p.order__form-field-name
+                                            |Обрати місто
+                                        select( class=`order__form-field form__field form__field-item`)
+                                            option(value="" selected disabled)
+                                                |Оберіть місто
+                                            option(value="")
+                                                |Житомир
+                                            option(value="")
+                                                |Київ
+                                            option(value="")
+                                                |Вінниця
+                                    div(class=`order__form-group`)
+                                        p.order__form-field-name
+                                            |Обрати відділення 
+                                        select( class=`order__form-field form__field form__field-item`)
+                                            option(value="" selected disabled)
+                                                |Оберіть відділення
+                                            option(value="")
+                                                |1 відділення
+                                            option(value="")
+                                                |2 відділення
+                                            option(value="")
+                                                |3 відділення
+                        fieldset(class=`order__fieldset fieldset form__row`)
+                            legend.legend.order__form-legend
+                                |Спосіб оплати
+                            div(class=`filter__group order__form-filter`)
+                                input(class=`filter__field` type='radio' name='payment' id="credit" data-accordeon="credit")
+                                label(for="credit")
+                                    |Кредитна / Розрахункова картка (LiqPay)
+                            .order__form-filter-fields(data-fields="credit")
+                                div.order__form-row
+                                    div(class=`order__form-group`)
+                                        p.order__form-field-name
+                                            |Форма власності
+                                        select( class=`order__form-field form__field form__field-item`)
+                                            option(value="" selected disabled)
+                                                |Оберіть форму власності
+                                            option(value="")
+                                                |ФОП
+                                            option(value="")
+                                                |ТОВ
+                                    div(class=`order__form-group`)
+                                        p.order__form-field-name
+                                            |ІНН
+                                        input( class=`order__form-field form__field form__field-item` type='text' placeholder='ІНН' name='inn')
+                                div.order__form-row
+                                    div(class=`order__form-group`)
+                                        p.order__form-field-name
+                                            |Назва організації 
+                                        input( class=`order__form-field form__field form__field-item` type='text' placeholder='Назва організації' name='organization-name')
+                                    div(class=`order__form-group`)
+                                        p.order__form-field-name
+                                            |Номер свідотства 
+                                        input( class=`order__form-field form__field form__field-item` type='text' placeholder='Номер свідотства' name='name')
+                                div.order__form-row
+                                    div(class=`order__form-group`)
+                                        p.order__form-field-name
+                                            |ЄДРПОУ 
+                                        input( class=`order__form-field form__field form__field-item` type='text' placeholder='ЄДРПОУ' name='name')
+                                    div(class=`order__form-group`)
+                                        p.order__form-field-name
+                                            |Юридична адреса 
+                                        input( class=`order__form-field form__field form__field-item` type='text' placeholder='Юридична адреса' name='name')
+                            div(class=`filter__group order__form-filter`)
+                                input(class=`filter__field` type='radio' name='payment' id="cash-on-delivery" data-accordeon="cash-on-delivery" checked)
+                                label(for="cash-on-delivery")
+                                    |Накладений платіж
+                            .order__form-filter-fields(data-fields="cash-on-delivery")
+                                div.order__form-row
+                                    div(class=`order__form-group`)
+                                        p.order__form-field-name
+                                            |Форма власності
+                                        select( class=`order__form-field form__field form__field-item`)
+                                            option(value="" selected disabled)
+                                                |Оберіть форму власності
+                                            option(value="")
+                                                |ФОП
+                                            option(value="")
+                                                |ТОВ
+                                    div(class=`order__form-group`)
+                                        p.order__form-field-name
+                                            |ІНН
+                                        input( class=`order__form-field form__field form__field-item` type='text' placeholder='ІНН' name='inn')
+                                div.order__form-row
+                                    div(class=`order__form-group`)
+                                        p.order__form-field-name
+                                            |Назва організації 
+                                        input( class=`order__form-field form__field form__field-item` type='text' placeholder='Назва організації' name='organization-name')
+                                    div(class=`order__form-group`)
+                                        p.order__form-field-name
+                                            |Номер свідотства 
+                                        input( class=`order__form-field form__field form__field-item` type='text' placeholder='Номер свідотства' name='name')
+                                div.order__form-row
+                                    div(class=`order__form-group`)
+                                        p.order__form-field-name
+                                            |ЄДРПОУ 
+                                        input( class=`order__form-field form__field form__field-item` type='text' placeholder='ЄДРПОУ' name='name')
+                                    div(class=`order__form-group`)
+                                        p.order__form-field-name
+                                            |Юридична адреса 
+                                        input( class=`order__form-field form__field form__field-item` type='text' placeholder='Юридична адреса' name='name')
+                            div(class=`filter__group order__form-filter`)
+                                input(class=`filter__field` type='radio' name='payment' id="legal-entities" data-accordeon="legal-entities")
+                                label(for="legal-entities")
+                                    |Оформлення для юридичних осіб
+                            .order__form-filter-fields(data-fields="legal-entities")
+                                div.order__form-row
+                                    div(class=`order__form-group`)
+                                        p.order__form-field-name
+                                            |Форма власності
+                                        select( class=`order__form-field form__field form__field-item`)
+                                            option(value="" selected disabled)
+                                                |Оберіть форму власності
+                                            option(value="")
+                                                |ФОП
+                                            option(value="")
+                                                |ТОВ
+                                    div(class=`order__form-group`)
+                                        p.order__form-field-name
+                                            |ІНН
+                                        input( class=`order__form-field form__field form__field-item` type='text' placeholder='ІНН' name='inn')
+                                div.order__form-row
+                                    div(class=`order__form-group`)
+                                        p.order__form-field-name
+                                            |Назва організації 
+                                        input( class=`order__form-field form__field form__field-item` type='text' placeholder='Назва організації' name='organization-name')
+                                    div(class=`order__form-group`)
+                                        p.order__form-field-name
+                                            |Номер свідотства 
+                                        input( class=`order__form-field form__field form__field-item` type='text' placeholder='Номер свідотства' name='name')
+                                div.order__form-row
+                                    div(class=`order__form-group`)
+                                        p.order__form-field-name
+                                            |ЄДРПОУ 
+                                        input( class=`order__form-field form__field form__field-item` type='text' placeholder='ЄДРПОУ' name='name')
+                                    div(class=`order__form-group`)
+                                        p.order__form-field-name
+                                            |Юридична адреса 
+                                        input( class=`order__form-field form__field form__field-item` type='text' placeholder='Юридична адреса' name='name')
+                        .order__block_mobile.desktop-hidden
+                            button.main-btn(type="submit")
+                                span.main-btn__text
+                                    |Відправити
+                aside.order__sidebar.sidebar_size_l
+                    .order__sidebar-layer
+                        .order__sidebar-header.sidebar__header
+                            .order__sidebar-goods.sidebar__section
+                                p.order__sidebar-goods-text.sidebar__section-title
+                                    |Ваше замовлення
+                                .order__sidebar-goods-count.sidebar__section-count
+                                    span
+                                        |3 
+                                    | товари
+                        .order__sidebar-body.sidebar__body
+                            ul.sidebar__order-list
+                                li.sidebar__order-list-item
+                                    .order__sidebar-order-text.sidebar__section-text
+                                        |Товарів на суму
+                                    .order__sidebar-order-count.sidebar__section-count
+                                        span
+                                            |68 275 
+                                        |грн.
+                                li.sidebar__order-list-item
+                                    .order__sidebar-order-text.sidebar__section-text
+                                        |Доставка
+                                    .order__sidebar-order-count.sidebar__section-count
+                                        span
+                                            |100
+                                        |грн.
+                                li.sidebar__order-list-item
+                                    .order__sidebar-order-text.sidebar__section-text
+                                        |Знижки
+                                    .order__sidebar-order-count.sidebar__section-count
+                                        span
+                                            |2000 
+                                        | грн.
+                        .order__sidebar-footer.sidebar__footer
+                            .sidebar__total.sidebar__section
+                                p.order__sidebar-total-text.sidebar__section-title
+                                    |Всього
+                                .order__sidebar-total-count.sidebar__section-count
+                                    span
+                                        |65 275 
+                                    |грн.
+                            .order__sidebar-buttons.sidebar__buttons
+                                .order__sidebar-btn.sidebar__btn
+                                    button.main-btn(type="submit" form="order-form")
+                                        span.main-btn__text
+                                            |Замовити

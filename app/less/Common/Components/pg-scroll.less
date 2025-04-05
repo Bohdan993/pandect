@@ -1,0 +1,34 @@
+.pg-scrolled {
+    height: 16px;
+
+    .os-scrollbar>.os-scrollbar-track>.os-scrollbar-handle {
+        background-color: @main-color;
+        cursor: pointer;
+        height: 8px;
+        top: -3px;
+        max-width: 250px;
+
+        &:hover,
+        &.active {
+            background-color: rgba(@main-color, 0.75);
+        }
+    }
+
+    .os-scrollbar>.os-scrollbar-track {
+        background-color: @gray3;
+        height: 2px;
+    }
+
+    .os-scrollbar-horizontal {
+        bottom: 3px;
+    }
+}
+
+.pg-scroller {
+    height: 5px;
+}
+
+.pg-parent {
+    margin-right: -10px;
+    margin-left: -10px;
+}

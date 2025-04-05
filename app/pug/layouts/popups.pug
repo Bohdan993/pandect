@@ -1,0 +1,172 @@
+.popups
+    #cart-popup.cart-popup(style="display: none;")
+        .cart-popup__header
+            h3.cart-popup__title
+                |Кошик
+            span.cart-popup__close
+                i.ico
+                    +svg2('close')
+        .cart-popup__body
+            ul.cart-popup__list
+                li.cart-popup__list-item
+                    a.cart-popup__link(href="#")
+                        .cart-popup__goods-image-layer
+                            img.cart__goods-image(src="img/video-preview.png", alt="Image")
+                        p.cart-popup__goods-name
+                            |Pandora DWM-210
+                        p.cart-popup__goods-price
+                            |13 655 грн./шт.
+                li.cart-popup__list-item
+                    a.cart-popup__link(href="#")
+                        .cart-popup__goods-image-layer
+                            img.cart__goods-image(src="img/video-preview.png", alt="Image")
+                        p.cart-popup__goods-name
+                            |Pandora DWM-210
+                        p.cart-popup__goods-price
+                            |13 655 грн./шт.
+                li.cart-popup__list-item
+                    a.cart-popup__link(href="#")
+                        .cart-popup__goods-image-layer
+                            img.cart__goods-image(src="img/video-preview.png", alt="Image")
+                        p.cart-popup__goods-name
+                            |Pandora DWM-210
+                        p.cart-popup__goods-price
+                            |13 655 грн./шт.
+            ul.cart-popup__order-list
+                li.cart-popup__order-list-item
+                    .cart-popup__order-text
+                        |Товарів на суму
+                    .cart-popup__order-count
+                        span
+                            |68 275 
+                        |грн.
+                li.cart-popup__order-list-item
+                    .cart-popup__order-text
+                        |Знижки
+                    .cart-popup__order-count
+                        span
+                            |2000 
+                        | грн.
+        .cart-popup__footer
+            .cart-popup__footer-row
+                button.cart-popup__clean-btn
+                    i.ico.cart-popup__clean-btn-ico
+                        +svg2('close')
+                    span.cart-popup__clean-btn-text
+                        |Очистити кошик
+                .cart-popup__total
+                    p.cart-popup__total-text
+                        |Всього
+                    .cart-popup__total-count
+                        span
+                            |65 275 
+                        |грн.
+            .cart-popup__footer-row
+                .cart-popup__buttons
+                    .cart-popup__btn
+                        a.main-btn(href="/cart.html")
+                            span.main-btn__text
+                                |Перейти в кошик
+                    .cart-popup__btn
+                        a.main-btn.main-btn_transparent(href="#")
+                            span.main-btn__text
+                                |Продовжити покупки
+    #callback-popup.callback-popup.popup(style="display: none;")
+        .popup__close-wrap
+            span.popup__close
+                i.ico
+                    +svg2('close')
+        .popup__content
+            h3.popup__title
+                |Ми знаємо все про захист авто!
+            p.popup__description
+                |Заповніть заявку і ми підберемо те, що потрібно саме вам
+            form.popup__form(id="callback-popup-form")
+                div.popup_form-row
+                    div(class=`popup__form-group`)
+                        input( class=`popup__form-field form__field form__field-item` type='tel' placeholder='Телефон' name='phone')
+                    div(class=`popup__form-group`)
+                        #grecaptchaContainer3
+                        .grecaptchaError(style="bottom: 5px;")
+                            |Підтвердіть, що ви не робот
+                    div(class=`popup__form-group`)
+                        button.popup__btn.main-btn
+                            span.main-btn__text
+                                |Надіслати
+    #thanks-popup.thanks-popup.popup(style="display: none;")
+        .popup__close-wrap
+            span.popup__close
+                i.ico
+                    +svg2('close')
+        .popup__content
+            h3.popup__title
+                |Дякуємо!
+            p.popup__description
+                |Наш менеджер зв'яжеться з Вами найближчим часом
+    if body.classList.includes('compare-page')
+        #compare-delete-popup.compare-delete-popup.popup(style="display: none;")
+            .popup__close-wrap
+                span.popup__close
+                    i.ico
+                        +svg2('close')
+            .popup__content
+                h3.popup__title
+                    |Ви дійсно хочете видалити всі товари з порівняння?
+            .popup__buttons
+                button.popup__btn.main-btn.main-btn_transparent
+                    span.main-btn__text
+                        |Так
+                button.popup__btn.main-btn
+                    span.main-btn__text
+                        |Ні
+        #compare-filter-popup.compare-filter-popup.popup(style="display: none;")
+            .popup__close-wrap
+                span.popup__close
+                    i.ico
+                        +svg2('close')
+            .popup__content
+                ul.compare-filter-popup__filters-list
+                    li.compare-filter-popup__filters-list-item
+                        div(class=`filter__group`)
+                            input(class=`filter__field` type='radio' name='popup-auto' data-id="all" checked id="popup-all")
+                            label(for="popup-all")
+                                |Всі характеристики
+                        div(class=`filter__group`)
+                            input(class=`filter__field` type='radio' name='popup-auto' data-id="different" id="popup-different")
+                            label(for="popup-different")
+                                |Тільки що розрізняються
+                        div(class=`filter__group`)
+                            input(class=`filter__field` type='radio' name='popup-auto' data-id="same" id="popup-same")
+                            label(for="popup-same")
+                                |Тільки що співпадають
+    if body.classList.includes('single-page') || body.classList.includes('cart-page') || body.classList.includes('catalog-page') || body.classList.includes('index-page')
+        #one-click-buy-popup.one-click-buy-popup.popup(style="display: none;")
+            .popup__close-wrap
+                span.popup__close
+                    i.ico
+                        +svg2('close')
+            .popup__content
+                h3.popup__title
+                    |Купити в 1 клік
+                form.popup__form(id="one-click-buy-popup-form")
+                    div.popup_form-row
+                        div(class=`popup__form-group`)
+                            input( class=`popup__form-field form__field form__field-item` type='text' placeholder='Ім\'я' name='name')
+                        div(class=`popup__form-group`)
+                            input( class=`popup__form-field form__field form__field-item` type='tel' placeholder='Телефон' name='phone')
+                        div(class=`popup__form-group`)
+                            #grecaptchaContainer4
+                            .grecaptchaError(style="bottom: 5px;")
+                                |Підтвердіть, що ви не робот
+                        div(class=`popup__form-group`)
+                            button.popup__btn.main-btn
+                                span.main-btn__text
+                                    |Надіслати
+    if body.classList.includes('installation-center-page')
+        #image-popup.image-popup.popup(style="display: none;")
+            .popup__close-wrap
+                span.popup__close
+                    i.ico
+                        +svg2('close')
+            .popup__content
+                .img__layer

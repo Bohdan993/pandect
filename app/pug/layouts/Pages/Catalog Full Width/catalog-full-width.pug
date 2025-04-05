@@ -1,0 +1,71 @@
+.catalog-full-width.page
+    .catalog-full-width__layer.page__layer
+        .center
+            +breadcrumbs(['Головна', 'Каталог товарів', 'Автосигналізації Pandora і Pandect'])
+            .f-container.catalog-full-width__container
+                .catalog-full-width__main.page__main
+                    .catalog__actions
+                        .catalog__sort.catalog-action__select-group
+                            p.catalog-action__text
+                                |Сортувати:
+                            select.catalog-action__select
+                                option(selected='true')
+                                    |По популярності
+                                option
+                                    |Від дешевих до дорогих
+                                option
+                                    |Від дорогих до дешевих
+                        .catalog__show.catalog-action__select-group
+                            p.catalog-action__text
+                                |Показати по:
+                            select.catalog-action__select
+                                option(selected='true')
+                                    |20
+                                option
+                                    |50
+                                option
+                                    |100
+                        .catalog__products-switch
+                            .catalog__tabs.tabs
+                                span.catalog__tab.active.tab.products-tab(data-tab="")
+                                    |Показати все
+                                span.catalog__tab.tab.products-tab(data-tab="")
+                                    |Акції
+                        .catalog__view-switch
+                            .catalog__tabs.tabs
+                                span.catalog__tab.tab.active.view-tab(data-tab="%grid")
+                                    i.ico
+                                        +svg2('grid')
+                                span.catalog__tab.tab.view-tab(data-tab="%list")
+                                    i.ico
+                                        +svg2('view-list')
+                    ul.catalog__cards-list
+                        li.catalog__cards-list-item
+                            +card('catalog', 'img/car.png')
+                        //- li.catalog__cards-list-item
+                        //-     +card('catalog', 'img/card-img-1.png')
+                        //- li.catalog__cards-list-item
+                        //-     +card('catalog', 'img/card-img-2.png')
+                        //- li.catalog__cards-list-item
+                        //-     +card('catalog', 'img/car.png')
+                        //- li.catalog__cards-list-item
+                        //-     +card('catalog', 'img/card-img-1.png')
+                        //- li.catalog__cards-list-item
+                        //-     +card('catalog', 'img/card-img-2.png')
+                        //- li.catalog__cards-list-item
+                        //-     +card('catalog', 'img/car.png')
+                        //- li.catalog__cards-list-item
+                        //-     +card('catalog', 'img/card-img-1.png')
+                        //- li.catalog__cards-list-item
+                        //-     +card('catalog', 'img/card-img-2.png')
+                        //- li.catalog__cards-list-item
+                        //-     +card('catalog', 'img/car.png')
+                        //- li.catalog__cards-list-item
+                        //-     +card('catalog', 'img/card-img-1.png')
+                        //- li.catalog__cards-list-item
+                        //-     +card('catalog', 'img/card-img-2.png')
+                    a.catalog__button.main-btn(href="#")
+                        span.main-btn__text
+                            |Завантажити ще
+                        i.ico
+                            +svg2('load')

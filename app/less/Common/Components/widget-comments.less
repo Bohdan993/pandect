@@ -1,0 +1,69 @@
+.widget-comments {
+    margin-bottom: 30px;
+}
+
+.widget-comments__text {
+    font-size: 14/16 * 1rem;
+    font-weight: 500;
+    background-color: @white;
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 22px;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        /* Абсолютное позиционирование */
+        left: 40px;
+        bottom: -17px;
+        /* Положение треугольника */
+        border: 17px solid transparent;
+        border-left: 17px solid @white;
+        border-top: 17px solid @white;
+
+    }
+}
+
+.widget-comments__image {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.widget-comments__content {
+    padding-top: 11px;
+}
+
+.widget-comments__figure {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.widget-comments__author {
+    font-size: 13/16 * 1rem;
+    font-weight: 700;
+}
+
+.widget__list-item {
+    &:not(:last-child) {
+        padding-bottom: 40px;
+    }
+}
+
+.widget-comments__link {
+    font-size: 13/16 * 1rem;
+    font-weight: 500;
+    text-decoration: underline;
+    transition: color 0.25s linear;
+
+    &:hover {
+        color: @main-color;
+    }
+}

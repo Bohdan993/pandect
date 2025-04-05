@@ -1,0 +1,170 @@
+.no-webp {
+    .why-we__layer {
+        background: url('../img/why-we-bg.png') center no-repeat/cover;
+        &:after {
+            background: url('../img/geometric4.png') no-repeat center/contain;
+        }
+    }
+}
+
+.why-we__layer {
+    background: url('../img/why-we-bg.webp') center no-repeat/cover;
+    color: @white;
+    .fPa(100%, 100%, 100px, 100px, 1200px, 1920px);
+
+
+    position: relative;
+
+    &>* {
+        position: relative;
+        z-index: 1;
+    }
+
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 55/ (289 + 264 + 110) * 100%;
+        left: 60/1920 * 100%;
+        width: 118px;
+        height: 118px;
+        background: url('../img/geometric4.webp') no-repeat center/contain;
+    }
+}
+
+.why-we__offers-list {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin: 0 - 17px;
+}
+
+.why-we__title {
+    padding-bottom: 37px - 9px;
+}
+
+
+.why-we__description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24/18;
+    padding-bottom: 57px;
+    max-width: 907px;
+}
+
+.why-we__offers-list-item-layer {
+
+    background: @white;
+    border: 1px solid @gray4;
+    border-radius: 4px;
+    padding: 27px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: @font-color;
+    transition: 0.25s linear color, transform 0.25s linear, background-color 0.25s linear, box-shadow 0.25s linear, border-color 0.25s linear;
+}
+
+.why-we__offers-list-item {
+    flex-basis: 20%;
+    padding: 17px;
+    flex-shrink: 0;
+    // flex-grow: 1;
+    min-width: 244px + (17px * 2);
+    min-height: 233px + (17px * 2);
+    ;
+
+    &:first-child {
+        .why-we__offers-ico {
+            svg {
+                fill: @white;
+                stroke: @main-color;
+            }
+        }
+    }
+
+
+    &:hover {
+        .why-we__offers-list-item-layer {
+            background: @main-color;
+            box-shadow: 0px 4px 20px rgba(39, 43, 63, 0.2);
+            border-radius: 4px;
+            color: @white;
+            transform: scale(272/244);
+            border-color: @main-color;
+        }
+
+        .why-we__offers-ico {
+            svg {
+                fill: @white;
+                stroke: @main-color;
+            }
+        }
+
+        &:first-child {
+            .why-we__offers-ico {
+                svg {
+                    fill: @main-color;
+                    stroke: @white;
+                }
+            }
+        }
+
+    }
+}
+
+
+.why-we__offers-ico {
+    width: 72px;
+    height: 72px;
+    min-width: 72px;
+    margin-bottom: 39px;
+
+    svg {
+        width: 72px;
+        height: 72px;
+        min-width: 72px;
+        fill: @main-color;
+        transition: 0.25s linear stroke, 0.25s linear fill;
+    }
+}
+
+
+.why-we__offers-text {
+    font-size: 16px;
+    line-height: 22/16;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+
+///////
+
+@media screen and(max-width: 1200px) {}
+
+@media screen and(max-width: 992px) {}
+
+
+@media screen and(max-width: 768px) {
+    .why-we__description {
+        font-size: 16px;
+    }
+
+}
+
+
+@media screen and(max-width: 576px) {
+    .why-we__title {
+        text-align: center;
+    }
+
+    .why-we__description {
+        text-align: center;
+        font-size: 14px;
+    }
+}

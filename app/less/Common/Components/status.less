@@ -1,0 +1,61 @@
+.status {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 8px;
+
+    &__ico {
+        width: 12px;
+        height: 9px;
+        min-width: 12px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 5px;
+
+        svg {
+            width: 12px;
+            height: 9px;
+        }
+    }
+
+    &.green {
+        color: @green;
+
+        svg {
+            fill: @green;
+        }
+    }
+
+    &.red {
+        color: @tomato;
+
+        svg {
+            fill: @tomato;
+        }
+    }
+}
+
+.status__text {
+    font-size: 14px;
+}
+
+
+
+//////////////
+
+
+@media screen and(max-width: 1200px) {}
+
+@media screen and(max-width: 992px) {}
+
+
+@media screen and(max-width: 768px) {
+    .status__text {
+        font-size: 12px;
+    }
+}
+
+
+
+@media screen and(max-width: 576px) {}

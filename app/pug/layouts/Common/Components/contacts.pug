@@ -1,0 +1,58 @@
+mixin contacts(clazz)
+            ul(class=`${ clazz ? clazz + '-list' : ''} contacts__list`)
+                li(class=`${ clazz ? clazz + '-list-item' : ''} contacts__list-item`)
+                    i.ico.contacts__ico.s-marker
+                    .contacts__info
+                        h3.contacts__title
+                            |Наша адреса:
+                        ul.contacts__info-list
+                            li.contacts__info-list-item(class=`${ clazz ? clazz + '-info-list-item' : ''}` data-address="м. Київ, Куренівський провулок, 15")
+                                p.contacts__text
+                                    |м. Київ, пров. Куренівський, 15
+                                span.contacts__note
+                                    |В'їзд зі сторони вулиці Куренівської
+                            li.contacts__info-list-item(class=`${ clazz ? clazz + '-info-list-item' : ''}` data-address="м. Вишневе, вулиця Київська, 2")
+                                p.contacts__text
+                                    |м. Вишневе, вулиця Київська, 2
+                            li.contacts__info-list-item(class=`${ clazz ? clazz + '-info-list-item' : ''}` data-address="м. Київ, вулиця Миколи Трублаїні, 37-В")
+                                p.contacts__text
+                                    |м. Київ, вулиця Миколи Трублаїні, 37-В
+                li(class=`${ clazz ? clazz + '-list-item' : ''} contacts__list-item`)
+                    i.ico.contacts__ico.s-phone
+                    .contacts__info
+                        h3.contacts__title
+                            |Телефон:
+                        a.contacts__link(href="tel:+380999999999")
+                            |+380 (99) 999 99 99
+                li(class=`${ clazz ? clazz + '-list-item' : ''} contacts__list-item`)
+                    i.ico.contacts__ico.s-clock-2
+                    .contacts__info
+                        h3.contacts__title
+                            |Графік роботи:
+                        p.contacts__text_strong
+                            |ПН-СБ: 09.00-18.00
+                        p.contacts__text
+                            |НД: вихідний
+                li(class=`${ clazz ? clazz + '-list-item' : ''} contacts__list-item`)
+                    i.ico.contacts__ico.s-mail
+                    .contacts__info
+                        h3.contacts__title
+                            |E-mail:
+                        a.contacts__link(href="mailto:info@pandect.com.ua")
+                            |info@pandect.com.ua
+                        .contacts__social
+                            h3.contacts__title
+                                |Ми в соц. мережах:
+                            ul.contacts__social-list
+                                li.contacts__social-list-item
+                                    a.contacts__social-link(href="#") 
+                                        i.ico
+                                            +svg2('facebook')
+                                li.contacts__social-list-item
+                                    a.contacts__social-link(href="#") 
+                                        i.ico
+                                            +svg2('youtube')
+                                li.contacts__social-list-item
+                                    a.contacts__social-link(href="#") 
+                                        i.ico
+                                            +svg2('instagram')

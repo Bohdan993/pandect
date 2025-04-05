@@ -1,0 +1,137 @@
+.no-webp {
+    .feedback__layer {
+        background: url('../img/form-bg.png') no-repeat center/cover;
+    }
+}
+
+.feedback__layer {
+    color: @white;
+    // .fPa(85%, 85%, 85px, 85px, 1200px, 1920px);
+    padding-top: 81px;
+    padding-bottom: 85px;
+    background: url('../img/form-bg.webp') no-repeat center/cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 2;
+}
+
+.feedback__title {
+    padding-bottom: 25px;
+}
+
+.feedback__description {
+    padding-bottom: 40px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21/18;
+}
+
+.feedback__fieldset {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feedback__form-group {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 428/1360 * 100%;
+    border-radius: 4px;
+    border: 1px solid @transparent;
+    transition: border-color 0.25s linear;
+    &:not(.feedback__form-group_with-btn) {
+        &:focus-within {
+            border: 1px solid @main-color;
+        }
+    }
+    
+}
+
+
+.feedback__form-field {
+    background: @white;
+    border-radius: 4px;
+    padding: 13px 23px 13px 23px;
+    text-align: left;
+    font-size: 14px;
+
+    &::-webkit-input-placeholder {
+        color: rgba(@gray2, 1);
+    }
+
+    &::-moz-placeholder {
+        color: rgba(@gray2, 1);
+    }
+}
+
+.feedback__form-btn {
+    max-width: 317px;
+    display: block;
+    // margin-right: auto;
+}
+
+//////////////
+
+
+
+@media screen and(max-width: 1200px) {}
+
+@media screen and(max-width: 992px) {
+    .feedback__description {
+        br {
+            display: none;
+        }
+    }
+}
+
+
+@media screen and(max-width: 768px) {
+    .feedback__layer {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .feedback__fieldset {
+        flex-wrap: wrap;
+    }
+
+    .feedback__form-group {
+        flex-basis: 100%;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .feedback__title {
+        text-align: center;
+    }
+
+    .feedback__description {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .feedback__form-btn {
+        margin: 0 auto;
+    }
+
+    .feedback__form-btn {
+        max-width: 240px;
+    }
+}
+
+
+
+@media screen and(max-width: 576px) {
+    .feedback__layer {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .feedback__description {
+        font-size: 14px;
+    }
+}

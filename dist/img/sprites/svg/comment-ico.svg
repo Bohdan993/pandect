@@ -1,0 +1,12 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 16" width="18" height="16">
+	<title>News-4</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #1a8174 } 
+	</style>
+	<g id="News-4">
+		<g id="Comment">
+			<path id="Shape 670" class="shp0" d="M2.53 0L15.03 0C16.33 0 17.39 1.07 17.39 2.39L17.39 10.11C17.39 11.42 16.34 12.49 15.03 12.5L15.03 16L10.05 12.5L2.53 12.5C1.22 12.5 0.16 11.43 0.16 10.11L0.16 2.39C0.16 1.07 1.22 0 2.53 0Z" />
+		</g>
+	</g>
+</svg>

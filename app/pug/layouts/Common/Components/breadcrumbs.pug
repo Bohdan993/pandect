@@ -1,0 +1,12 @@
+mixin breadcrumbs(list)
+    nav.breadcrumbs
+        ul.breadcrumbs__list
+            each val, index in list
+                li.breadcrumbs__list-item
+                    if index !== list.length - 1
+                        a.breadcrumbs__link(href="#")= val
+                        span.breadcrumbs__separator
+                            |/
+                    else
+                        p.breadcrumbs__text= val
+                    

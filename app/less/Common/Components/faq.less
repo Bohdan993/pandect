@@ -1,0 +1,129 @@
+.faq__layer {
+    .fPa(100%, 100%, 100px, 100px, 1200px, 1920px);
+    position: relative;
+
+
+    &>* {
+        position: relative; 
+        z-index: 1;
+    }
+}
+
+.faq__title {
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+.faq__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.faq__description {
+    flex-basis: 50%;
+    
+    &:nth-child(odd) {
+        padding-right: 15px; 
+    }
+
+    &:nth-child(even) {
+        padding-left: 15px;
+    }
+}
+
+.faq__accordeon {
+    overflow: hidden;
+    border-bottom: 1px solid rgba(@gray3, .75);
+}
+
+.faq__accordeon-title {
+    font-weight: 700;
+    transition: color 0.25s linear;
+    line-height: 24/18;
+    cursor: pointer;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    justify-content: space-between;
+
+    .ico {
+        width: 14px;
+        height: 14px;
+        min-width: 14px;
+        transition: transform 0.25s linear;
+        position: relative;
+        margin-left: 5px;
+
+        svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            transition: fill 0.25s linear;
+        }
+    }
+
+
+    &.open {
+        .ico {
+            transform: rotate(180deg)
+        }
+    }
+
+
+    &:hover {
+        color: @main-color;
+
+        svg {
+            fill: @main-color;
+        }
+    }
+
+}
+
+
+.faq__accordeon-text {
+    height: 0;
+    display: none;
+    transition: 0.25s linear all;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+
+@media screen and(max-width: 768px) {
+    .faq__container {
+        flex-wrap: wrap;
+    }
+
+    .faq__title {
+        padding-bottom: 20px;
+    }
+
+    .faq__accordeon-title {
+        font-size: 16px;
+
+        .ico {
+            width: 12px;
+            height: 12px;
+            min-width: 12px;
+        }
+    }
+
+    .faq__description {
+        flex-basis: 100%;
+
+        &:nth-child(odd) {
+            padding-right: 0;
+        }
+
+        &:nth-child(even) {
+            padding-left: 0;
+        }
+    }
+}

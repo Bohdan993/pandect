@@ -1,0 +1,64 @@
+mixin card(clazz, img, isCompare = false)
+			a(class=`card ${ clazz ? clazz + '__card' : ''}` href="https://google.com")
+				div(class=`card__layer ${ clazz ? clazz + '__card-layer' : ''}`)
+					div(class=`card__header ${ clazz ? clazz + '__card-header' : ''}`)
+						div(class=`card__img-layer ${ clazz ? clazz + '__card-img-layer' : ''}`)
+								if img.startsWith('data')
+									img(
+										class=`card__img ${ clazz ? clazz + '__card-img' : ''}` 
+										data-splide-lazy=`${img.substring(4)}`
+										alt="Card Image"
+									)
+								else
+									img(
+										class=`card__img ${ clazz ? clazz + '__card-img' : ''}` 
+										src=`${img}`
+										alt="Card Image"
+									)
+								img(class="card__bage" src="img/3years.png" )
+						if isCompare	
+							span(class=`card__remove ${ clazz ? clazz + '__card-remove' : ''}`)
+								i.ico
+									+svg2('close')
+						ul(class=`card__labels ${ clazz ? clazz + '__card-labels' : ''}`)
+							li(class=`card__label ${ clazz ? clazz + '__card-label' : ''}`)
+								p(class=`card__label-text hit-sale ${ clazz ? clazz + '__card-label-text' : ''}`)
+									|Хіт продаж
+							li(class=`card__label ${ clazz ? clazz + '__card-label' : ''}`)
+								p(class=`card__label-text discount ${ clazz ? clazz + '__card-label-text' : ''}`)
+									|Знижка
+							li(class=`card__label ${ clazz ? clazz + '__card-label' : ''}`)
+								p(class=`card__label-text installation ${ clazz ? clazz + '__card-label-text' : ''}`)
+									|Установка
+							li(class=`card__label ${ clazz ? clazz + '__card-label' : ''}`)
+								p(class=`card__label-text novelty ${ clazz ? clazz + '__card-label-text' : ''}`)
+									|Новинка
+					div(class=`card__body ${ clazz ? clazz + '__card-body' : ''}`)
+						div(class=`card__status green status ${ clazz ? clazz + '__card-status' : ''}`)
+							i(class=`ico card__status-ico status__ico ${ clazz ? clazz + '__card-status--ico' : ''}`)
+								+svg2('check')
+							p(class=`card__status-text status__text ${ clazz ? clazz + '__card-status-text' : ''}`)
+								|В наявності
+						.card__info-wrap
+							h3(class=`card__title ${ clazz ? clazz + '__card-title' : ''}`)
+								|Pandora DWM-210
+							p(class=`card__description ${ clazz ? clazz + '__card-description' : ''}`)
+								|Автомобільна протиугінна GSM-Bluetooth система
+						.card__price-wrap
+							p(class=`card__old-price ${ clazz ? clazz + '__card-old-price' : ''}`)
+								|15.000 грн./шт
+							p(class=`card__price ${ clazz ? clazz + '__card-price' : ''}`)
+								|13 655 грн./шт
+					div(class=`card__footer ${ clazz ? clazz + '__card-footer' : ''}`)
+						button(class=`card__button main-btn main-btn_transparent ${ clazz ? clazz + '__card-button' : ''}`)
+							i.ico
+								+svg2('cart-bag')
+							span.main-btn__text
+								|До кошика
+						//- button(class=`main-btn main-btn_transparent one-click-buy-button`)
+						//- 		span
+						//- 			|Купити в 1 клік
+						if !isCompare	
+							button(class=`card__compare compare-btn ${ clazz ? clazz + '__card-compare' : ''}`)
+								i.ico
+									+svg2('comparison')

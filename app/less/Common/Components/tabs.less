@@ -1,0 +1,73 @@
+ .blog-tabs {
+     padding-bottom: 50px;
+ }
+
+
+ .blog-tabs__list {
+    & .slider {
+        // position: absolute;
+        padding: 0;
+        pointer-events: none;
+    }
+     & .slider__before,
+     & .slider__after {
+         width: 45px;
+         height: 100%;
+         left: 0;
+         top: 0;
+         background: @main-color;
+         position: absolute;
+         border-radius: 45px;
+         z-index: 0;
+         transition: .40s ease-in-out;
+     }
+
+     & .slider__after {
+         transition: .52s ease-in-out;
+     }
+
+     &[data-active="all"] {
+         & .slider__after {
+             width: 138px;
+         }
+
+
+         & .slider__before {
+             width: 138px;
+         }
+     }
+
+ }
+
+ .blog-tabs__list-item {
+     position: relative;
+     font-size: 14/16 * 1rem;
+     text-align: center;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 2;
+
+     &.active {
+         color: @white;
+     }
+
+     &[data-tab="all"] {
+         width: 143px;
+     }
+
+     &[data-tab="popular"] {
+         width: 150px;
+     }
+
+     &[data-tab="resent"] {
+         width: 136px;
+     }
+
+
+ }
+
+ .blog-tabs__counter {
+     display: inline-block;
+     margin-left: 5px;
+ }

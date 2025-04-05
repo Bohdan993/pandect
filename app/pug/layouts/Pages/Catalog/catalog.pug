@@ -1,0 +1,234 @@
+.catalog.page
+    .catalog__layer.page__layer
+        .center
+            +breadcrumbs(['Головна', 'Каталог товарів', 'Автосигналізації Pandora і Pandect'])
+            .f-container.catalog__container
+                aside.catalog__sidebar.sidebar
+                    .catalog__sections
+                        h3.catalog__sections-title.sidebar__title
+                            |Розділи
+                        ul.catalog__sections-list.sidebar__list
+                            li.catalog__sections-list-item.sidebar__list-item
+                                a.catalog__sections-link.sidebar__link.active(href="#")
+                                    |Автосигналізації Pandora і Pandect
+                            li.catalog__sections-list-item.sidebar__list-item
+                                a.catalog__sections-link.sidebar__link(href="#") 
+                                    |Імобілайзери
+                            li.catalog__sections-list-item.sidebar__list-item
+                                a.catalog__sections-link.sidebar__link(href="#") 
+                                    |Аксесуари
+                    .catalog__filters
+                        .catalog__block_mobile.desktop-hidden
+                            .catalog__filters-close
+                                i.ico
+                                    +svg2('close')
+                        h3.catalog__filters-title.sidebar__title
+                            |Фільтри
+                        ul.catalog__filters-list.sidebar__list
+                            li.catalog__filters-list-item.sidebar__list-item
+                                p.filter__title.catalog__filter-title.open(data-accordeon="price")
+                                    |Ціна
+                                    i.ico
+                                        +svg2('arr-down')
+                                .filter__fields.catalog__filter-fields(data-fields="price")
+                                    div(class=`filter__group`)
+                                        #slider.catalog__slider
+                                    div(class=`filter__group`)
+                                        input(class=`filter__field catalog__input-number` type='number' name='from')
+                                        span.filter__separator
+                                            |-
+                                        input(class=`filter__field catalog__input-number` type='number' name='to')
+                            li.catalog__filters-list-item.sidebar__list-item
+                                p.filter__title.catalog__filter-title.open(data-accordeon="avto")
+                                    |Автозапуск
+                                    i.ico
+                                        +svg2('arr-down')
+                                .filter__fields.catalog__filter-fields(data-fields="avto")
+                                    div(class=`filter__group`)
+                                        input(class=`filter__field` type='radio' name='auto' id="auto-yes")
+                                        label(for="auto-yes")
+                                            |Так
+                                    div(class=`filter__group`)
+                                        input(class=`filter__field` type='radio' name='auto' id="auto-no")
+                                        label(for="auto-no")
+                                            |Ні
+                            li.catalog__filters-list-item.sidebar__list-item
+                                p.filter__title.catalog__filter-title.open(data-accordeon="tag")
+                                    |Мітка
+                                    i.ico
+                                        +svg2('arr-down')
+                                .filter__fields.catalog__filter-fields(data-fields="tag")
+                                    div(class=`filter__group`)
+                                        input(class=`filter__field` type='radio' name='mark' id="mark-yes")
+                                        label(for="mark-yes")
+                                            |Так
+                                    div(class=`filter__group`)
+                                        input(class=`filter__field` type='radio' name='mark' id="mark-no")
+                                        label(for="mark-no")
+                                            |Ні
+                            li.catalog__filters-list-item.sidebar__list-item
+                                p.filter__title.catalog__filter-title.open(data-accordeon="gsm")
+                                    |GSM
+                                    i.ico
+                                        +svg2('arr-down')
+                                .filter__fields.catalog__filter-fields(data-fields="gsm")
+                                    div(class=`filter__group`)
+                                        input(class=`filter__field` type='radio' name='gsm' id="gsm-yes")
+                                        label(for="gsm-yes")
+                                            |Так
+                                    div(class=`filter__group`)
+                                        input(class=`filter__field` type='radio' name='gsm' id="gsm-no")
+                                        label(for="gsm-no")
+                                            |Ні
+                            li.catalog__filters-list-item.sidebar__list-item
+                                p.filter__title.catalog__filter-title.open(data-accordeon="gps")
+                                    |GPS
+                                    i.ico
+                                        +svg2('arr-down')
+                                .filter__fields.catalog__filter-fields(data-fields="gps")
+                                    div(class=`filter__group`)
+                                        input(class=`filter__field` type='radio' name='gps' id="gps-yes")
+                                        label(for="gps-yes")
+                                            |Так
+                                    div(class=`filter__group`)
+                                        input(class=`filter__field` type='radio' name='gps' id="gps-no")
+                                        label(for="gps-no")
+                                            |Ні
+                            li.catalog__filters-list-item.sidebar__list-item
+                                p.filter__title.catalog__filter-title.open(data-accordeon="brands")
+                                    |Бренди
+                                    i.ico
+                                        +svg2('arr-down')
+                                .filter__fields.catalog__filter-fields(data-fields="brands")
+                                    .filter__fields_second
+                                        div(class=`filter__group filter__group_second`)
+                                            input(class=`filter__field` type='radio' name='brand' id="pandect")
+                                            label(for="pandect")
+                                                img(src="img/pandect-logo.svg", alt="Pandect")
+                                        div(class=`filter__group filter__group_second`)
+                                            input(class=`filter__field` type='radio' name='brand' id="pandora")
+                                            label(for="pandora")
+                                                img(src="img/pandora-logo.svg", alt="Pandora")
+                .catalog__main.page__main
+                    .catalog__actions
+                        .catalog__block_mobile.desktop-hidden
+                            button(class=`catalog__filter-button main-btn`)
+                                i.ico
+                                    +svg2('filter')
+                                span.main-btn__text
+                                    |ФІЛЬТР
+                        .catalog__sort.catalog-action__select-group
+                            p.catalog-action__text
+                                |Сортувати:
+                            select.catalog-action__select
+                                option(selected='true')
+                                    |По популярності
+                                option
+                                    |Від дешевих до дорогих
+                                option
+                                    |Від дорогих до дешевих
+                        .catalog__show.catalog-action__select-group
+                            p.catalog-action__text
+                                |Показати по:
+                            select.catalog-action__select
+                                option(selected='true')
+                                    |20
+                                option
+                                    |50
+                                option
+                                    |100
+                        .catalog__products-switch
+                            .catalog__tabs.tabs
+                                span.catalog__tab.active.tab.products-tab(data-tab="")
+                                    |Показати все
+                                span.catalog__tab.tab.products-tab(data-tab="")
+                                    |Акції
+                        .catalog__view-switch
+                            .catalog__tabs.tabs
+                                span.catalog__tab.tab.active.view-tab(data-tab="%grid")
+                                    i.ico
+                                        +svg2('grid')
+                                span.catalog__tab.tab.view-tab(data-tab="%list")
+                                    i.ico
+                                        +svg2('view-list')
+                    .catalog__tags
+                        .catalog__found
+                            p.catalog__found-text
+                                |Знайдено
+                            span.catalog__found-counter
+                                |(20)
+                        ul.catalog__tags-list
+                            li.catalog__tags-list-item
+                                .catalog__tag-wrap
+                                    .catalog__tag
+                                        i.ico.catalog__tag-remove
+                                            +svg2('close')
+                                        .catalog__tag-content
+                                            p.catalog__tag-text
+                                                |Автозапуск / Так
+                            li.catalog__tags-list-item
+                                .catalog__tag-wrap
+                                    .catalog__tag
+                                        i.ico.catalog__tag-remove
+                                            +svg2('close')
+                                        .catalog__tag-content
+                                            p.catalog__tag-text
+                                                | > 6 338
+                            li.catalog__tags-list-item
+                                .catalog__tag-wrap
+                                    .catalog__tag
+                                        i.ico.catalog__tag-remove
+                                            +svg2('close')
+                                        .catalog__tag-content
+                                            p.catalog__tag-text
+                                                | < 24 356
+                            li.catalog__tags-list-item
+                                .catalog__tag-wrap
+                                    .catalog__tag
+                                        i.ico.catalog__tag-remove
+                                            +svg2('close')
+                                        .catalog__tag-content
+                                            p.catalog__tag-text
+                                                |Мітка / Так
+                            li.catalog__tags-list-item
+                                .catalog__tag-wrap
+                                    .catalog__tag
+                                        i.ico.catalog__tag-remove
+                                            +svg2('close')
+                                        .catalog__tag-content
+                                            img.catalog__tag-img(src="img/pandect-logo.svg" alt="Pandect")
+                        button.catalog__clean-btn
+                            span.catalog__clean-btn-text
+                                |Очистити все
+                            i.ico.catalog__clean-btn-ico
+                                +svg2('close')
+                    ul.catalog__cards-list
+                        li.catalog__cards-list-item
+                            +card('catalog', 'img/car.png')
+                        li.catalog__cards-list-item
+                            +card('catalog', 'img/card-img-1.png')
+                        li.catalog__cards-list-item
+                            +card('catalog', 'img/card-img-2.png')
+                        li.catalog__cards-list-item
+                            +card('catalog', 'img/car.png')
+                        li.catalog__cards-list-item
+                            +card('catalog', 'img/card-img-1.png')
+                        li.catalog__cards-list-item
+                            +card('catalog', 'img/card-img-2.png')
+                        li.catalog__cards-list-item
+                            +card('catalog', 'img/car.png')
+                        li.catalog__cards-list-item
+                            +card('catalog', 'img/card-img-1.png')
+                        li.catalog__cards-list-item
+                            +card('catalog', 'img/card-img-2.png')
+                        li.catalog__cards-list-item
+                            +card('catalog', 'img/car.png')
+                        li.catalog__cards-list-item
+                            +card('catalog', 'img/card-img-1.png')
+                        li.catalog__cards-list-item
+                            +card('catalog', 'img/card-img-2.png')
+                    a.catalog__button.main-btn(href="#")
+                        span.main-btn__text
+                            |Завантажити ще
+                        i.ico
+                            +svg2('load')

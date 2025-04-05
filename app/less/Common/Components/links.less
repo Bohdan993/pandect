@@ -1,0 +1,21 @@
+.links__list {
+    margin: 0;
+    padding: 0;
+}
+
+.links__list-item {
+    &:not(:last-child) {
+        padding-bottom: 22px;
+    }
+}
+
+.links__item {
+
+    font-size: 16/14 * 1rem;
+    line-height: 20/16;
+    transition: 0.25s linear color;
+
+    &:hover {
+        color: @main-color;
+    }
+}

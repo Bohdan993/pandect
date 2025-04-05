@@ -1,0 +1,20 @@
+mixin feedback(clazz, title, text)
+        div(class=`feedback ${ clazz ? clazz + '__feedback' : ''}`)
+            div(class=`feedback__layer ${ clazz ? clazz + '__feedback-layer' : ''}`)
+                .center
+                    h2(class=`title__h2 feedback__title ${ clazz ? clazz + '__feedback-title' : ''}`) !{title}
+                    p(class=`feedback__description ${ clazz ? clazz + '__feedback-description' : ''}`) !{text}
+                    form(action="#" class=`feedback__form form ${ clazz ? clazz + '__feedback-form' : ''}`)
+                        fieldset(class=`feedback__fieldset fieldset form__row ${ clazz ? clazz + '__feedback-fieldset' : ''}`)
+                            div(class=`feedback__form-group ${ clazz ? clazz + '__feedback-form-group' : ''}`)
+                                input( class=`feedback__form-field form__field ${ clazz ? clazz + '__feedback-form-field' : ''}` type='text' placeholder='ім\'я' name='name')
+                            div(class=`feedback__form-group ${ clazz ? clazz + '__feedback-form-group' : ''}`)
+                                input( class=`feedback__form-field form__field ${ clazz ? clazz + '__feedback-form-field' : ''}` type='tel' placeholder='телефон' name='phone')
+                            //- div(class=`feedback__form-group ${ clazz ? clazz + '__feedback-form-group' : ''}`)
+                            //-     #grecaptchaContainer2
+                            //-     .grecaptchaError(style="bottom: -15px;")
+                            //-         |Підтвердіть, що ви не робот
+                            div(class=`feedback__form-group feedback__form-group_with-btn ${ clazz ? clazz + '__feedback-form-group' : ''}`)
+                                button( class=`feedback__form-btn main-btn main-btn_white ${ clazz ? clazz + '__feedback-form-btn' : ''}` type='submit')
+                                    |Замовити дзвінок
+                        //- div(class=`form__row`)
